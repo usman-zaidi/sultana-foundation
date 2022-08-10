@@ -1,4 +1,6 @@
 <template>
+    <CRow>
+        <CCol :xs="8" class="offset-2" >
 
                     <CCard>
                         <CCardBody class="p-4">
@@ -50,7 +52,8 @@
                             </CForm>
                         </CCardBody>
                     </CCard>
-
+        </CCol>
+    </CRow>
 </template>
 
 <script>

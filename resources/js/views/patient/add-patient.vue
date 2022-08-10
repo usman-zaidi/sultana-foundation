@@ -1,8 +1,10 @@
 <template>
+    <CRow>
+        <CCol :xs="8" class="offset-2" >
     <CCard>
         <CCardBody class="p-4">
-            <CForm class="row ">
-                <h1>Patient Detail</h1>
+            <CForm class="row g-3">
+                <h1>Patient Details</h1>
                 <p class="text-medium-emphasis">Add Patient</p>
                 <CCol :md="6">
                     <CFormLabel for="inputName">Patient Name</CFormLabel>
@@ -51,6 +53,8 @@
             </CForm>
         </CCardBody>
     </CCard>
+        </CCol>
+    </CRow>
 </template>
 
 <script>
