@@ -53,7 +53,7 @@
 
 
                         <CCol :xs="12" class="pt-4">
-                            <CButton type="submit" color="primary">Add Detail</CButton>
+                            <CButton type="submit" class=" p-2" color="primary">Add Detail</CButton>
                         </CCol>
                     </CForm>
                 </CCardBody>

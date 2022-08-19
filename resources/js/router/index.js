@@ -1,5 +1,5 @@
 import { h, resolveComponent } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import {createRouter, createWebHashHistory} from "vue-router/dist/vue-router";
 
 import DefaultLayout from "../layouts/DefaultLayout.vue";
 
@@ -27,22 +27,77 @@ const routes = [
       },
 
         {
-            path: '/walking-donor',
-            name: 'WalkingDonor',
+            path: '/donors',
+            name: 'Donors',
             component: {
                 render() {
                     return h(resolveComponent('router-view'))
                 },
             },
-            redirect: '/walking-donor/add-donor',
+            redirect: '/donors/add-donors',
             children: [
                 {
-                    path: '/walking-donor/add-donor',
-                    name: 'AddDonor',
-                    component: () => import('../views/walking-donors/Add-Donors.vue'),
+                    path: '/donors/add-donors',
+                    name: 'AddDonors',
+                    component: () => import('../views/donors/add-donors.vue'),
+                },
+                {
+                    path: '/donors/add-question',
+                    name: 'AddQuestion',
+                    component: () => import('../views/donors/add-question.vue'),
+                },
+                {
+                    path: '/donors/donor-list',
+                    name: 'DonorList',
+                    component: () => import('../views/donors/donor-list.vue'),
+                },
+                {
+                    path: '/donors/add-blood-sample',
+                    name: 'AddBloodSample',
+                    component: () => import('../views/donors/add-blood-sample.vue'),
+                },
+                {
+                    path: '/donors/add-blood-collection',
+                    name: 'AddBloodCollection',
+                    component: () => import('../views/donors/add-blood-collection.vue'),
                 },
             ],
         },
+
+
+
+
+        {
+            path: '/test',
+            name: 'Test',
+            component: {
+                render() {
+                    return h(resolveComponent('router-view'))
+                },
+            },
+            redirect: '/test/add-test',
+            children: [
+                {
+                    path: '/test/add-test',
+                    name: 'AddTest',
+                    component: () => import('../views/test/add-test.vue'),
+                },
+                {
+                    path: '/test/add-test-column',
+                    name: 'AddTestColumn',
+                    component: () => import('../views/test/add-test-column.vue'),
+                },
+                {
+                    path: '/test/add-test-attributes',
+                    name: 'AddTestAttributes',
+                    component: () => import('../views/test/add-test-attribute.vue'),
+                },
+            ],
+        },
+
+
+
+
 
 
         {

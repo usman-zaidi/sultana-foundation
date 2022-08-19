@@ -10,20 +10,65 @@ export default [
         },
     },
 
+
     {
         component: 'CNavGroup',
-        name: 'Walking Donor',
-        to: '/walking-donor',
-        icon: 'cil-drop',
+
+        name: 'Donors',
+        to: '/donors',
+        icon: 'cil-puzzle',
         items: [
             {
                 component: 'CNavItem',
-                name: 'Add Donor',
-                to: '/walking-donor/add-donor',
+                name: 'Add Donors',
+                to: '/donors/add-donors',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Add Blood Sample Detail',
+                to: '/donors/add-blood-sample',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Add Blood Collection',
+                to: '/donors/add-blood-collection',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Add Question',
+                to: '/donors/add-question',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Donor List',
+                to: '/donors/donor-list',
             },
         ],
     },
 
+    {
+        component: 'CNavGroup',
+        name: 'Test',
+        to: '/test',
+        icon: 'cil-puzzle',
+        items: [
+            {
+                component: 'CNavItem',
+                name: 'Add Test',
+                to: '/test/add-test',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Add Test Column',
+                to: '/test/add-test-Column',
+            },
+            {
+                component: 'CNavItem',
+                name: 'Add Test Attributes',
+                to: '/test/add-test-attributes',
+            },
+        ],
+    },
     {
         component: 'CNavGroup',
         name: 'Patient',
