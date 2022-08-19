@@ -1,14 +1,14 @@
 <template>
   <CFooter>
     <div>
-      <a href="https://coreui.io" target="_blank">CoreUI</a>
+      <a href="#" target="_blank">Kash Powers</a>
       <span class="ms-1"
-        >&copy; {{ new Date().getFullYear() }} creativeLabs.</span
+        >&copy; {{ new Date().getFullYear() }}</span
       >
     </div>
     <div class="ms-auto">
       <span class="me-1" target="_blank">Powered by</span>
-      <a href="https://coreui.io/vue">CoreUI for Vue</a>
+      <a href="#">Kash Powers</a>
     </div>
   </CFooter>
 </template>
