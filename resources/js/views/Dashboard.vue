@@ -7,7 +7,7 @@
           <CCardBody>
             <CRow>
               <CCol :sm="5">
-                <h4 id="traffic" class="card-title mb-0">Traffic</h4>
+                <h4 id="traffic" class="card-title mb-0">Donors Impression</h4>
                 <div class="small text-medium-emphasis">January 2021</div>
               </CCol>
               <CCol :sm="7" class="d-none d-md-block">
@@ -36,7 +36,7 @@
           <CCardFooter>
             <CRow :xs="{ cols: 1 }" :md="{ cols: 5 }" class="text-center">
               <CCol class="mb-sm-2 mb-0">
-                <div class="text-medium-emphasis">Visits</div>
+                <div class="text-medium-emphasis">Blood Available</div>
                 <strong>29.703 Users (40%)</strong>
                 <CProgress
                   class="mt-2"
@@ -47,7 +47,7 @@
                 />
               </CCol>
               <CCol class="mb-sm-2 mb-0 d-md-down-none">
-                <div class="text-medium-emphasis">Unique</div>
+                <div class="text-medium-emphasis">Blood Usage</div>
                 <strong>24.093 Users (20%)</strong>
                 <CProgress
                   class="mt-2"
@@ -58,7 +58,7 @@
                 />
               </CCol>
               <CCol class="mb-sm-2 mb-0">
-                <div class="text-medium-emphasis">Pageviews</div>
+                <div class="text-medium-emphasis">Cross Matching(%)</div>
                 <strong>78.706 Views (60%)</strong>
                 <CProgress
                   class="mt-2"

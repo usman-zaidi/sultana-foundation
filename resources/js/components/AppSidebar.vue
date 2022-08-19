@@ -12,7 +12,7 @@
     "
   >
     <CSidebarBrand >
-        <img src="../assets/brand/logo.png" style="width: 250px !important; height: 120px !important;">
+        <img src="../assets/brand/logo.png" style="width: 220px !important; height: 100px !important;">
     </CSidebarBrand>
     <AppSidebarNav />
     <CSidebarToggler

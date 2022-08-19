@@ -1,18 +1,19 @@
 export default [
-  {
-    component: 'CNavItem',
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: 'cil-speedometer',
-    badge: {
-      color: 'primary',
-      text: 'NEW',
+    {
+        component: 'CNavItem',
+        name: 'Dashboard',
+        to: '/dashboard',
+        icon: 'cil-speedometer',
+        badge: {
+            color: 'primary',
+            text: 'NEW',
+        },
     },
-  },
 
 
     {
         component: 'CNavGroup',
+
         name: 'Donors',
         to: '/donors',
         icon: 'cil-puzzle',
@@ -72,11 +73,11 @@ export default [
         component: 'CNavGroup',
         name: 'Patient',
         to: '/patient',
-        icon: 'cil-puzzle',
+        icon: 'cil-user',
         items: [
             {
                 component: 'CNavItem',
-                name: 'AddPatient',
+                name: 'Add Patient',
                 to: '/patient/add-patient',
             },
         ],

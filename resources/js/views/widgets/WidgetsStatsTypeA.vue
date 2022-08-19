@@ -8,7 +8,7 @@
             (-12.4% <CIcon icon="cil-arrow-bottom" />)
           </span>
         </template>
-        <template #title>Users</template>
+        <template #title>Donors</template>
         <template #action>
           <CDropdown placement="bottom-end">
             <CDropdownToggle
@@ -278,7 +278,7 @@
             (-23.6% <CIcon icon="cil-arrow-bottom" />)
           </span>
         </template>
-        <template #title>Sessions</template>
+        <template #title>Patients</template>
         <template #action>
           <CDropdown placement="bottom-end">
             <CDropdownToggle
