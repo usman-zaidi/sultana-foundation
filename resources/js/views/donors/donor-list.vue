@@ -23,7 +23,7 @@
                                 <td>ali@gmail.com</td>
                                 <td>A+</td>
                                 <td>
-                                    <a href=""><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></a>
+                                    <router-link to="/donors/donor-profile/+${id}"><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></router-link>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-pen-to-square" class="p-2"/></a>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-delete-left" class="p-2"/></a>
                                 </td>
@@ -34,7 +34,7 @@
                                 <td>wasim@gmail.com</td>
                                 <td>O+</td>
                                 <td>
-                                    <a href=""><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></a>
+                                    <router-link to="/donors/donor-profile/+${id}"><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></router-link>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-pen-to-square" class="p-2"/></a>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-delete-left" class="p-2"/></a>
                                 </td>
@@ -45,7 +45,7 @@
                                 <td>usman@gmail.com</td>
                                 <td>O+</td>
                                 <td>
-                                    <a href=""><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></a>
+                                    <router-link to="/donors/donor-profile/+${id}"><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></router-link>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-pen-to-square" class="p-2"/></a>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-delete-left" class="p-2"/></a>
                                 </td>
@@ -56,7 +56,7 @@
                                 <td>adil@gmail.com</td>
                                 <td>B-</td>
                                 <td>
-                                    <a href=""><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></a>
+                                    <router-link to="/donors/donor-profile/+${id}"><font-awesome-icon icon="fa-solid fa-eye"  size="md" class="p-2"/></router-link>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-pen-to-square" class="p-2"/></a>
                                     <a href=""><font-awesome-icon icon="fa-solid fa-delete-left" class="p-2"/></a>
                                    </td>
@@ -76,6 +76,11 @@ import DataTable from 'datatables.net-vue3';
 
 export default {
     name: "donor-list",
+    data(){
+        return {
+            id:'2',
+        }
+    },
     components: {
         DataTable,
     }

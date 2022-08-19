@@ -32,7 +32,7 @@
 
                         <CCol :md="6">
                             <CFormLabel for="inputName">Reg No # </CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="regNo" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputBGroup">Donors Type</CFormLabel>
@@ -45,19 +45,19 @@
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Name</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="name" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Father Name</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="fName" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Date of Birth</CFormLabel>
-                            <CFormInput id="inputName" type="date" />
+                            <CFormInput v-model="dob" id="inputName" type="date" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Weight</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="weight" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputBGroup">Blood Group</CFormLabel>
@@ -68,31 +68,31 @@
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Last Donation</CFormLabel>
-                            <CFormInput id="inputName" type="date" />
+                            <CFormInput v-model="lastDonation" id="inputName" type="date" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">No of Donation</CFormLabel>
-                            <CFormInput id="inputName" type="number" />
+                            <CFormInput v-model="noOfDonation" id="inputName" type="number" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Institute/Office/Res</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="address" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Class</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="class" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Tel #</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="tel" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputName">Contact #</CFormLabel>
-                            <CFormInput id="inputName" type="text" />
+                            <CFormInput v-model="contact" id="inputName" type="text" />
                         </CCol>
                         <CCol :md="6">
                             <CFormLabel for="inputEmail4">Email</CFormLabel>
-                            <CFormInput id="inputEmail4" type="email" />
+                            <CFormInput v-model="email" id="inputEmail4" type="email" />
                         </CCol>
 
 
@@ -104,6 +104,7 @@
                             id="validationFormCheck2"
                             type="radio"
                             name="gender"
+                            v-model="gender"
                             label="Male"
                             required
                         /> Male
@@ -111,6 +112,7 @@
                             id="validationFormCheck3"
                             type="radio"
                             name="gender"
+                            v-model="gender"
                             label="Female"
                             required
                         /> Female
@@ -200,7 +202,7 @@
                     </CForm>
                 </div>
 
-                <div v-if="currentTabIndex === 2">
+                <div v-if="currentTabIndex === 2 && donorType=='sd'">
                     <CForm class="row ">
                         <CCol :md="6">
                             <CFormLabel for="inputCNIC">File #</CFormLabel>
@@ -256,6 +258,20 @@ export default {
                     title: 'Agreement',
                 },
             ],
+            regNo:'',
+            name:'',
+            fName:'',
+            dob:'',
+            weight:'',
+            bloodGroup:'',
+            lastDonation:'',
+            noOfDonation:'',
+            address:'',
+            class:'',
+            tel:'',
+            contact:'',
+            email:'',
+            gender:'',
             donorType:'',
             currentTabIndex: 0,
         };
