@@ -35,6 +35,11 @@ export default [
             },
             {
                 component: 'CNavItem',
+                name: 'Add Serology',
+                to: '/donors/add-serology',
+            },
+            {
+                component: 'CNavItem',
                 name: 'Add Question',
                 to: '/donors/add-question',
             },

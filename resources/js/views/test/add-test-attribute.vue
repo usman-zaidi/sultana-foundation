@@ -16,7 +16,6 @@
                         <CForm >
                             <CRow>
                            <CCol :md="4">
-
                                 <CFormLabel for="inputState">Select Test</CFormLabel>
                                 <CFormSelect id="inputState">
                                     <option>Choose...</option>
@@ -24,10 +23,10 @@
                                 </CFormSelect>
                             </CCol>
 
-                            <CCol :md="4">
-                                <CFormLabel for="inputFName">Attribute Name</CFormLabel>
-                                <CFormInput id="inputFName" v-model="name" type="text"/>
-                            </CCol>
+                                <CCol :md="4">
+                                    <CFormLabel for="inputFName">Attribute Name</CFormLabel>
+                                    <CFormInput id="inputFName" v-model="name" type="text"/>
+                                </CCol>
                                 <CCol :md="4" class="pt-4">
                                     <CButton type="button" @click="onSubmit" class=" p-2" color="primary">Add Attribute
                                     </CButton>

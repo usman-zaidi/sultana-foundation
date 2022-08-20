@@ -5,7 +5,7 @@
                 <CRow>
                     <CCol :xs="12">
                         <CCardHeader>
-                            <h3>Add Blood Collection</h3>
+                            <h3>Add Serology</h3>
                         </CCardHeader>
                     </CCol>
                 </CRow>
@@ -13,107 +13,88 @@
                     <CCol :xs="12" :md="8">
                         <CCardBody class="p-4">
                             <CCard class="p-4">
-                                <CForm>
+                                <CForm >
                                     <CRow>
-                                        <CCol xs:="12" :md="6">
-                                            <CFormLabel for="inputBGroup">Select Donor</CFormLabel>
-                                            <CFormSelect id="inputBGroup">
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputState">Select Donor</CFormLabel>
+                                            <CFormSelect id="inputState">
                                                 <option>Choose...</option>
-                                                <option value="wd">.....</option>
-                                                <option value="cd">.....</option>
+                                                <option>...</option>
                                             </CFormSelect>
                                         </CCol>
-                                    </CRow>
-                                    <CRow class="pt-4">
-                                        <h6>Blood Flow</h6>
+
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">Intial Testing Date</CFormLabel>
+                                            <CFormInput id="inputFName"  type="date"/>
+                                        </CCol>
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">Repeat Testing Date</CFormLabel>
+                                            <CFormInput id="inputFName" type="date"/>
+                                        </CCol>
+
                                     </CRow>
                                     <CRow>
-                                        <CCol xs:="12"  :md="3">
-
-                                            <CFormLabel for="inputName">START</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="Hr/Min" type="text" />
-                                        </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">END</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="Hr/Min" type="text" />
-
-                                        </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">VEIN</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="Hr/Min" type="text" />
-
-                                        </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">TOTAL TIME</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="Hr/Min" type="text" />
-
-                                        </CCol>
-                                    </CRow>
-                                    <CRow class="pt-4">
-                                        <CCol xs:="12" :md="6">
-                                            <CFormLabel for="inputBGroup">Select Blood Bag</CFormLabel>
-                                            <CFormSelect id="inputBGroup">
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputState">Select Test</CFormLabel>
+                                            <CFormSelect id="inputState">
                                                 <option>Choose...</option>
-                                                <option value="1">SINGLE</option>
-                                                <option value="2">DOUBLE</option>
-                                                <option value="3">TRIPLE</option>
+                                                <option>...</option>
                                             </CFormSelect>
                                         </CCol>
-                                    </CRow>
-                                    <CRow class="pt-4">
-                                        <h6>Voltaken</h6>
-                                    </CRow>
 
-                                    <CRow>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">WB</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="ml" type="text" />
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">C/OVAL</CFormLabel>
+                                            <CFormInput id="inputFName" v-model="coval" type="text"/>
                                         </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">PRBC</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="ml" type="text" />
-
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">DON_VAL</CFormLabel>
+                                            <CFormInput id="inputFName" v-model="donval" type="text"/>
                                         </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">FFP</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="ml" type="text" />
-
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">RESULT</CFormLabel>
+                                            <CFormInput id="inputFName" v-model="res" type="text"/>
                                         </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">PLTS</CFormLabel>
-                                            <CFormInput id="inputName" placeholder="ml" type="text" />
-
+                                        <CCol :md="4">
+                                            <CFormLabel for="inputFName">LAB TECH</CFormLabel>
+                                            <CFormInput id="inputFName" v-model="labtech" type="text"/>
+                                        </CCol>
+                                        <CCol :md="4" class="pt-4">
+                                            <CButton type="button" @click="onSubmit" class=" p-2" color="primary">Add Serology
+                                            </CButton>
                                         </CCol>
                                     </CRow>
-                                    <CRow class="pt-4">
-                                        <h6>Problems</h6>
-                                    </CRow>
 
-                                    <CRow>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">OVER COLL</CFormLabel>
-                                            <CFormInput id="inputName"  type="text" />
-                                        </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">LOW COLL</CFormLabel>
-                                            <CFormInput id="inputName"  type="text" />
 
-                                        </CCol>
-                                        <CCol xs:="12"  :md="3">
-                                            <CFormLabel for="inputName">FAIR COLL</CFormLabel>
-                                            <CFormInput id="inputName"  type="text" />
-
-                                        </CCol>
-                                    </CRow>
-                                    <CCol :xs="12" class="pt-4">
-                                        <CButton type="submit" color="primary">Add Collection</CButton>
-                                    </CCol>
-
+                                    <table class="table mt-5">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">C/OVAL</th>
+                                            <th scope="col">DON_VAL</th>
+                                            <th scope="col">Result</th>
+                                            <th scope="col">LAB TECH</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr v-for="(entry, i) in sortedList" :key="i">
+                                            <th scope="row">{{ ++i }}</th>
+                                            <td>{{ entry.coval }}</td>
+                                            <td>{{ entry.donval }}</td>
+                                            <td>{{ entry.res }}</td>
+                                            <td>{{ entry.labtech }}</td>
+                                            <td><a @click="removeElement(i)">
+                                                <font-awesome-icon icon="fa-solid fa-delete-left" class="p-2"/></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </CForm>
                             </CCard>
                         </CCardBody>
                     </CCol>
-                </CRow>
+                </CRow>>
+
             </CCard>
         </CCol>
     </CRow>
@@ -121,7 +102,30 @@
 
 <script>
 export default {
-    name: "add-serology"
+    name: "add-serology",
+    data: () => ({coval: "",donval: "",res: "",labtech: "", allSerologyValues: []}),
+    computed: {
+        sortedList: function () {
+            return this.allSerologyValues.slice().sort(function (a, b) {
+                return b.name - a.name;
+            });
+        },
+    },
+    methods: {
+        onSubmit() {
+            this.allSerologyValues.push({coval: this.coval,donval:this.donval,res: this.res,labtech:this.labtech});
+            this.clearForm();
+        },
+        clearForm() {
+            this.coval = "";
+            this.donval = "";
+            this.res = "";
+            this.labtech="";
+        },
+        removeElement: function (index) {
+            this.allSerologyValues.splice(index - 1, 1);
+        }
+    },
 }
 </script>
 

@@ -66,6 +66,11 @@ const routes = [
                     name: 'DonorProfile',
                     component: () => import('../views/donors/donor-profile.vue'),
                 },
+                {
+                    path: '/donors/add-serology',
+                    name: 'AddSerology',
+                    component: () => import('../views/donors/add-serology.vue'),
+                },
             ],
         },
 
